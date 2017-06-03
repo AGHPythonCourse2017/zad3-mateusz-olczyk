@@ -1,4 +1,4 @@
-from main import count_letters, how_many_words_can_be_built
+from posttruthanalyzer.__init__ import count_letters, how_many_words_can_be_built
 
 count_letters_test = count_letters('Lorem ipsum dolor sit amet, consectetur adipiscing elit.')
 assert count_letters_test['l'] == 3

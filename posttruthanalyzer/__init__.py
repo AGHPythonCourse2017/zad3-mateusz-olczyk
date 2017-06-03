@@ -72,6 +72,3 @@ def action():
     brief_article(article)
     count = how_many_words_can_be_built('POSTTRUTH', article.text)
     print('POST-TRUTH INDICATOR: '+str(count))
-
-
-action()
