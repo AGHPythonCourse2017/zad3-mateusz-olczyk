@@ -44,7 +44,7 @@ def brief_article(my_article):
     print('DATE: '+str(my_article.date))
     print('AUTHOR: '+(my_article.authors[0] if len(my_article.authors) else 'None'))
     print('TITLE: '+my_article.title)
-    print('TEXT: '+my_article.text[:200]+'...')
+    print('TEXT: '+my_article.text[:200]+'.......')
 
 
 def count_letters(text):
@@ -65,3 +65,13 @@ def how_many_words_can_be_built(word, text):
     for letter in letters1:
         multiplicity.append(letters2[letter]//letters1[letter])
     return min(multiplicity)
+
+
+def action():
+    article = seek_article()
+    brief_article(article)
+    count = how_many_words_can_be_built('POSTTRUTH', article.text)
+    print('POST-TRUTH INDICATOR: '+str(count))
+
+
+action()

@@ -1,6 +1,6 @@
-import main
+from main import count_letters, how_many_words_can_be_built
 
-count_letters_test = main.count_letters('Lorem ipsum dolor sit amet, consectetur adipiscing elit.')
+count_letters_test = count_letters('Lorem ipsum dolor sit amet, consectetur adipiscing elit.')
 assert count_letters_test['l'] == 3
 assert count_letters_test['o'] == 4
 assert count_letters_test['r'] == 3
@@ -17,6 +17,6 @@ assert count_letters_test['c'] == 3
 assert count_letters_test['n'] == 2
 assert count_letters_test['g'] == 1
 
-assert 4 == main.how_many_words_can_be_built('whatever', 'whateverwhateveradbawhateverdefghwhatever')
-assert 4 == main.how_many_words_can_be_built('whatever', 'whateverwhateveradbawhateverdefghwhatver')
-assert 3 == main.how_many_words_can_be_built('whatever', 'whateverwhateveradbawhateverdefghwhateer')
+assert 4 == how_many_words_can_be_built('whatever', 'whateverwhateveradbawhateverdefghwhatever')
+assert 4 == how_many_words_can_be_built('whatever', 'whateverwhateveradbawhateverdefghwhatver')
+assert 3 == how_many_words_can_be_built('whatever', 'whateverwhateveradbawhateverdefghwhateer')
