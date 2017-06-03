@@ -47,4 +47,21 @@ def brief_article(my_article):
     print('TEXT: '+my_article.text[:200]+'...')
 
 
-brief_article(seek_article())
+def count_letters(text):
+    text = text.lower()
+    result = {}
+    for letter in text:
+        if letter in result:
+            result[letter] += 1
+        else:
+            result[letter] = 1
+    return result
+
+
+def how_many_words_can_be_built(word, text):
+    letters1 = count_letters(word)
+    letters2 = count_letters(text)
+    multiplicity = []
+    for letter in letters1:
+        multiplicity.append(letters2[letter]//letters1[letter])
+    return min(multiplicity)
